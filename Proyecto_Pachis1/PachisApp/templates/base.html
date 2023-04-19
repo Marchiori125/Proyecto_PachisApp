@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <title>Pachi's</title>
+</head>
+<body>
+    <header>
+        <h2 class="logo">Logo</h2>
+        <nav class="navigation">
+            <a href="#">Inicio</a>
+            <a href="#">Sobre Nosotros</a>
+            <button class="btnlogin-popup">Iniciar Sesion</button>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </span>
+
+        <div class="form-box login">
+            <h2>Iniciar Sesion</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" required>
+                    <label for="">Contraseña</label>
+                </div>
+                <div class="remember-forgot">
+                    <label for=""><input type="checkbox">Recordarme</label>
+                    <a href="#">Olvido su contraseña?</a>
+                </div>
+                <button type="submit" class="btn">Iniciar Sesion</button>
+                <div class="login-register"><p>No tienes cuenta?<a href="#" class="register-link">Registrarse</a></p></div>
+            </form>
+        </div>
+        <div class="form-box register">
+            <h2>Registrarse</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="storefront-outline"></ion-icon></span>
+                    <input type="text" required>
+                    <label for="">Local</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="trail-sign-outline"></ion-icon></span>
+                    <input type="text" required>
+                    <label for="">Direccion</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" required>
+                    <label for="">Contraseña</label>
+                </div>
+                <button type="submit" class="btn">Registrarse</button>
+                <div class="login-register"><p>Ya tienes cuenta?<a href="#" class="login-link">Iniciar Sesion</a></p></div>
+            </form>
+        </div>
+    </div>
+
+    <section class="inicio">
+        <article class="nombre_frase">
+            <div>
+                <h1>PACHI'S</h1>
+                <h3>Una compañía familiar</h3>
+                <h4 class="btn-make-order">Hace Tu Pedido</h4>
+            </div>
+        </article>
+    </section>
+
+    <div class="product-wrapper">
+        <h2>Pedido</h2>
+        <span class="icon-close-product">
+            <ion-icon name="close"></ion-icon>
+        </span>
+        <form class="form-product" action="">
+            <div class="select-product">
+                <label for="product-select">Producto:</label>
+                <select id="product-select" name="product">
+                    <option value="selecciona">-</option>
+                    <option value="empanadas">Empanadas</option>
+                    <option value="calzoni">Calzoni</option>
+                    <option value="sandwichs">Sandwichs</option>
+                </select>
+            </div>
+            <div class="quantity-input">
+                <label for="quantity-input">Cantidad:</label>
+                <input type="number" id="quantity-input" name="quantity" min="1" max="100" value="1">
+            </div>
+            
+            <div id="options-wrapper">
+                <div id="empanadas-options" class="product-options">
+                    <label for="filling-select">Relleno:</label>
+                    <select id="filling-select" name="filling">
+                        <option value="selecciona">-</option>
+                        <option value="arabe">Arabe</option>
+                        <option value="pollo">Pollo</option>
+                        <option value="matambre">Matambre</option>
+                    </select>
+                </div>
+                <div id="calzoni-options" class="product-options">
+                    <label for="filling-select">Relleno:</label>
+                    <select id="filling-select" name="filling">
+                        <option value="selecciona">-</option>
+                        <option value="jamon">Jamón</option>
+                        <option value="queso">Queso</option>
+                        <option value="champinones">Champiñones</option>
+                    </select>
+                    
+                    <label for="sauce-select">Salsa:</label>
+                    <select id="sauce-select" name="sauce">
+                        <option value="selecciona">-</option>
+                        <option value="tomate">Tomate</option>
+                        <option value="blanca">Blanca</option>
+                        <option value="pesto">Pesto</option>
+                    </select>
+                </div>
+                <div id="sandwichs-options" class="product-options">
+                    <label for="bread-select">Pan:</label>
+                    <select id="bread-select" name="bread">
+                        <option value="selecciona">-</option>
+                        <option value="blanco">Blanco</option>
+                        <option value="integral">Integral</option>
+                        <option value="baguette">Baguette</option>
+                    </select>
+                    
+                    <label for="filling-select">Relleno:</label>
+                    <select id="filling-select" name="filling">
+                        <option value="selecciona">-</option>
+                        <option value="jamon">Jamón</option>
+                        <option value="queso">Queso</option>
+                        <option value="lechuga">Lechuga</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="btn-order">Realizar Pedido</button>
+        </form>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
